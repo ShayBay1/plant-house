@@ -8,7 +8,7 @@ import userService from "../../utils/userService";
 
 function App() {
   const [user, setUser] = useState(userService.getUser()); 
-
+  console.log("main app.jsx")
   function handleSignUpOrLogin() {
     setUser(userService.getUser()); // getting the user from localstorage decoding the jwt
   }
@@ -30,7 +30,10 @@ function App() {
           path="/signup"
           element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
         />
-        
+        <Route
+          path="/test"
+          element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+        />
       </Routes>
     );
   }
