@@ -30,10 +30,6 @@ function App() {
           path="/signup"
           element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
         />
-        <Route
-          path="/test"
-          element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
-        />
       </Routes>
     );
   }
